@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Thoughtful, garden-inspired floral arrangements and bespoke event flowers, designed by Casey Scaduto in the San Francisco Bay Area."
+      content="Sculptural, garden-gathered floral arrangements and bespoke event floristry by Casey Scaduto in the San Francisco Bay Area."
     />
-    <meta name="theme-color" content="#faf8f5" />
-    <title>Casey Scaduto Floral — Flowers for the feeling</title>
+    <meta name="theme-color" content="#13291E" />
+    <title>Casey Scaduto Floral — Botanical Atelier, San Francisco Bay Area</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
@@ -24,269 +24,445 @@
     <header class="site-header">
       <a class="wordmark" href="#top" aria-label="Casey Scaduto Floral home">
         <span class="wordmark-name">Casey Scaduto</span>
-        <span class="wordmark-subtitle">FLORAL STUDIO <span aria-hidden="true">✳</span> BAY AREA</span>
+        <span class="wordmark-subtitle">FLORAL ATELIER &mdash; SAN FRANCISCO BAY AREA</span>
       </a>
+
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation">
         <span class="sr-only">Open navigation menu</span>
         <span></span>
         <span></span>
       </button>
+
       <nav class="primary-navigation" id="primary-navigation" aria-label="Main navigation">
         <a href="#collections">Collections</a>
-        <a href="#events">Bespoke events</a>
-        <a href="#story">Our story</a>
-        <a href="#inquire">Inquire</a>
-        <a class="button button-small nav-cta" href="#collections">Order arrangement <span aria-hidden="true">↗</span></a>
+        <a href="#story">The Studio</a>
+        <a href="#events">Weddings &amp; Events</a>
+        <a href="#inquire">Commission</a>
+        <a class="button button-small nav-cta" href="#inquire">Inquire</a>
       </nav>
     </header>
 
     <main id="main">
+      <!-- HERO SECTION -->
       <section class="hero section-shell" id="top" aria-labelledby="hero-title">
         <div class="hero-copy">
-          <p class="eyebrow"><span class="eyebrow-line"></span> FLOWERS, WITH FEELING</p>
-          <h1 id="hero-title">A little more <em>lovely</em> in every day.</h1>
+          <p class="eyebrow"><span class="eyebrow-line"></span> SEASONAL FLORISTRY &bull; NORTHERN CALIFORNIA</p>
+          <h1 id="hero-title">Wildly gathered,<br /><em>deeply felt.</em></h1>
           <p class="hero-description">
-            Artful, garden-inspired flowers for the moments that matter—and the ones that simply deserve to.
-            Hand-arranged with care in the San Francisco Bay Area.
+            Architectural yet unhurried arrangements composed from Northern California heirloom stems,
+            crimson garden roses, and verdant forest foliage.
           </p>
           <div class="hero-actions">
-            <a class="button" href="#collections">Explore seasonal bouquets <span aria-hidden="true">↗</span></a>
-            <a class="text-link" href="#story">Meet the studio <span aria-hidden="true">→</span></a>
+            <a class="button" href="#collections">View the Edit <span aria-hidden="true">&nearr;</span></a>
+            <a class="text-link" href="#events">Private Events &amp; Weddings <span aria-hidden="true">&rarr;</span></a>
           </div>
-          <div class="hero-note">
-            <span class="note-flower" aria-hidden="true">✳</span>
-            <p>Small-batch stems.<br /><strong>Big-hearted arrangements.</strong></p>
-          </div>
+
+          <dl class="hero-metrics">
+            <div>
+              <dt>SOURCING</dt>
+              <dd>Marin, Sonoma &amp; Half Moon Bay growers</dd>
+            </div>
+            <div>
+              <dt>DELIVERY</dt>
+              <dd>Couriered daily across SF &amp; East Bay</dd>
+            </div>
+          </dl>
         </div>
+
         <div class="hero-visual">
           <div class="hero-arch">
             <img
-              src="https://placehold.co/700x900/E8C5C1/1E352F?text=Garden+Gathering"
-              alt="A soft blush-toned garden-inspired floral arrangement"
+              src="images/dark-redpink-flowers.jpg"
+              alt="Deep crimson and dark rose floral arrangement in an architectural vessel"
               fetchpriority="high"
             />
           </div>
-          <div class="hero-stamp" aria-label="Locally grown, thoughtfully gathered">
-            <span>LOCALLY GROWN</span>
-            <span class="stamp-star" aria-hidden="true">✳</span>
-            <span>THOUGHTFULLY GATHERED</span>
-          </div>
-          <p class="visual-caption">A softer kind of statement <span>— made by hand</span></p>
+          <figure class="hero-inset">
+            <img
+              src="images/candid-arrangement-photo-in-room-natural.jpg"
+              alt="Natural light study of a seasonal floral arrangement inside the studio"
+            />
+            <figcaption>No. 01 &mdash; Oxblood &amp; Briar Study</figcaption>
+          </figure>
         </div>
-        <a class="scroll-cue" href="#collections"><span aria-hidden="true">↓</span> TAKE A LOOK AROUND</a>
       </section>
 
+      <!-- SIGNATURE COLLECTIONS -->
       <section class="collections section-shell section-space" id="collections" aria-labelledby="collections-title">
         <div class="section-heading">
           <div>
-            <p class="eyebrow"><span class="eyebrow-line"></span> THE FLOWER EDIT</p>
-            <h2 id="collections-title">Gathered for <em>good days.</em></h2>
+            <p class="eyebrow"><span class="eyebrow-line"></span> CURATED EDITIONS</p>
+            <h2 id="collections-title">The Seasonal <em>Collection.</em></h2>
           </div>
-          <p class="section-intro">Seasonal favorites, each one arranged with a little room for nature to do her thing.</p>
+          <p class="section-intro">
+            Each vessel is composed to order using the week’s peak market harvests—celebrating natural movement,
+            deep crimson undertones, and lush botanical greens.
+          </p>
         </div>
 
         <div class="collection-toolbar">
-          <p>THE SIGNATURE COLLECTION <span aria-hidden="true">/</span> <span id="design-count">04 DESIGNS</span></p>
+          <p class="collection-meta">AUTUMN / WINTER EDIT &mdash; <span id="design-count">06 EDITIONS</span></p>
           <div class="filter-list" role="group" aria-label="Filter arrangements">
-            <button class="filter-button is-active" type="button" data-filter="all" aria-pressed="true">All flowers</button>
-            <button class="filter-button" type="button" data-filter="garden" aria-pressed="false">Garden</button>
-            <button class="filter-button" type="button" data-filter="romantic" aria-pressed="false">Romantic</button>
-            <button class="filter-button" type="button" data-filter="coastal" aria-pressed="false">Coastal</button>
+            <button class="filter-button is-active" type="button" data-filter="all" aria-pressed="true">All Editions</button>
+            <button class="filter-button" type="button" data-filter="crimson" aria-pressed="false">Crimson &amp; Velvet</button>
+            <button class="filter-button" type="button" data-filter="verdant" aria-pressed="false">Verdant &amp; Plum</button>
+            <button class="filter-button" type="button" data-filter="coastal" aria-pressed="false">Garden &amp; Coastal</button>
           </div>
         </div>
 
         <div class="product-grid">
-          <article class="product-card" data-category="garden romantic">
+          <article class="product-card" data-category="crimson">
             <div class="product-image-wrap">
-              <img src="https://placehold.co/600x760/E8C5C1/1E352F?text=Morning+Sunlit+Peony" alt="The Morning Sunlit Peony, a blush and cream seasonal bouquet" loading="lazy" />
-              <span class="product-tag">A STUDIO FAVORITE</span>
-              <button class="quick-view" type="button" data-product="morning" aria-label="Quick view The Morning Sunlit Peony">Quick view <span aria-hidden="true">↗</span></button>
+              <img
+                src="images/dark-redpink-flowers.jpg"
+                alt="The Crimson & Velvet Study featuring deep blood-red and dark rose blooms"
+                loading="lazy"
+              />
+              <span class="product-tag">SIGNATURE</span>
+              <button class="quick-view" type="button" data-product="crimson" aria-label="Customize The Crimson & Velvet Study">
+                Select &amp; Customize <span aria-hidden="true">&nearr;</span>
+              </button>
             </div>
             <div class="product-details">
-              <div><h3>The Morning Sunlit Peony</h3><p>Peonies, garden roses &amp; airy greens</p></div>
-              <span class="product-price">from $95</span>
+              <div>
+                <h3>The Crimson &amp; Velvet Study</h3>
+                <p>Oxblood garden roses, burgundy ranunculus &amp; dark foliage</p>
+              </div>
+              <span class="product-price">$135</span>
             </div>
           </article>
-          <article class="product-card" data-category="garden">
+
+          <article class="product-card" data-category="crimson coastal">
             <div class="product-image-wrap">
-              <img src="https://placehold.co/600x760/E6E4D9/1E352F?text=Botanical+Gardenia+Luxe" alt="The Botanical Gardenia Luxe, a lush cream and green arrangement" loading="lazy" />
-              <span class="product-tag">GARDEN GATHERED</span>
-              <button class="quick-view" type="button" data-product="gardenia" aria-label="Quick view The Botanical Gardenia Luxe">Quick view <span aria-hidden="true">↗</span></button>
+              <img
+                src="images/darkpink-lightpink-and-white-flowers.jpg"
+                alt="The Morning Sunlit Peony with dark pink, blush, and ivory blooms"
+                loading="lazy"
+              />
+              <span class="product-tag">SEASONAL</span>
+              <button class="quick-view" type="button" data-product="morning" aria-label="Customize The Morning Sunlit Peony">
+                Select &amp; Customize <span aria-hidden="true">&nearr;</span>
+              </button>
             </div>
             <div class="product-details">
-              <div><h3>Botanical Gardenia Luxe</h3><p>Gardenias, lisianthus &amp; sculptural foliage</p></div>
-              <span class="product-price">from $125</span>
+              <div>
+                <h3>The Morning Sunlit Peony</h3>
+                <p>Coral-crimson peonies, blush spray roses &amp; jasmine vine</p>
+              </div>
+              <span class="product-price">$120</span>
             </div>
           </article>
-          <article class="product-card" data-category="romantic">
+
+          <article class="product-card" data-category="verdant">
             <div class="product-image-wrap">
-              <img src="https://placehold.co/600x760/DCC6C0/1E352F?text=Velvet+Rose+%26+Ranunculus" alt="Velvet Rose and Ranunculus, an abundant rose-toned bouquet" loading="lazy" />
-              <span class="product-tag">A LOVE NOTE</span>
-              <button class="quick-view" type="button" data-product="velvet" aria-label="Quick view Velvet Rose and Ranunculus">Quick view <span aria-hidden="true">↗</span></button>
+              <img
+                src="images/purple-flowers-in-front-of-beautiful-and-verdant-leaved-plants.jpg"
+                alt="Verdant Botanical & Plum arrangement set against lush green leaves"
+                loading="lazy"
+              />
+              <span class="product-tag">ATELIER PICK</span>
+              <button class="quick-view" type="button" data-product="verdant" aria-label="Customize Verdant Botanical & Plum">
+                Select &amp; Customize <span aria-hidden="true">&nearr;</span>
+              </button>
             </div>
             <div class="product-details">
-              <div><h3>Velvet Rose &amp; Ranunculus</h3><p>Velvety roses, ranunculus &amp; sweet peas</p></div>
-              <span class="product-price">from $110</span>
+              <div>
+                <h3>Verdant Botanical &amp; Plum</h3>
+                <p>Deep plum scabiosa, sweet peas &amp; forest fern fronds</p>
+              </div>
+              <span class="product-price">$140</span>
             </div>
           </article>
-          <article class="product-card" data-category="coastal garden">
+
+          <article class="product-card" data-category="coastal">
             <div class="product-image-wrap">
-              <img src="https://placehold.co/600x760/D9E0D9/1E352F?text=Coastal+Wildflower+Study" alt="The Coastal Wildflower Study, a loose arrangement of seasonal meadow flowers" loading="lazy" />
-              <span class="product-tag">WILD AT HEART</span>
-              <button class="quick-view" type="button" data-product="coastal" aria-label="Quick view The Coastal Wildflower Study">Quick view <span aria-hidden="true">↗</span></button>
+              <img
+                src="images/white-and-lightpink-flowers.jpg"
+                alt="The Porcelaine & Blush Edit with crisp white and soft rose flowers"
+                loading="lazy"
+              />
+              <button class="quick-view" type="button" data-product="porcelaine" aria-label="Customize The Porcelaine & Blush Edit">
+                Select &amp; Customize <span aria-hidden="true">&nearr;</span>
+              </button>
             </div>
             <div class="product-details">
-              <div><h3>Coastal Wildflower Study</h3><p>Meadow blooms, cosmos &amp; dancing grasses</p></div>
-              <span class="product-price">from $85</span>
+              <div>
+                <h3>The Porcelaine &amp; Blush Edit</h3>
+                <p>Alabaster lisianthus, heirloom blush roses &amp; olive branch</p>
+              </div>
+              <span class="product-price">$110</span>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="coastal verdant">
+            <div class="product-image-wrap">
+              <img
+                src="images/purple-flowers-on-kitchen-table-plus-rustic-wood-theme-in-bg.jpg"
+                alt="Coastal Wildflower Study arranged on warm rustic wood"
+                loading="lazy"
+              />
+              <button class="quick-view" type="button" data-product="coastal" aria-label="Customize Coastal Wildflower Study">
+                Select &amp; Customize <span aria-hidden="true">&nearr;</span>
+              </button>
+            </div>
+            <div class="product-details">
+              <div>
+                <h3>Coastal Wildflower Study</h3>
+                <p>Marin meadow cosmos, wild delphinium &amp; coastal grasses</p>
+              </div>
+              <span class="product-price">$95</span>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="verdant crimson">
+            <div class="product-image-wrap">
+              <img
+                src="images/candid-arrangement-photo-in-room-natural.jpg"
+                alt="Atelier Table Compote photographed in soft afternoon light"
+                loading="lazy"
+              />
+              <button class="quick-view" type="button" data-product="compote" aria-label="Customize Atelier Table Compote">
+                Select &amp; Customize <span aria-hidden="true">&nearr;</span>
+              </button>
+            </div>
+            <div class="product-details">
+              <div>
+                <h3>Atelier Table Compote</h3>
+                <p>Low-profile dinner centerpiece in ceramic pedestal bowl</p>
+              </div>
+              <span class="product-price">$165</span>
             </div>
           </article>
         </div>
-        <p class="seasonal-note"><span aria-hidden="true">✳</span> Our flowers change with the season. We’ll always choose the freshest stems available.</p>
+
+        <p class="seasonal-note">
+          Because we work exclusively with living, seasonal harvests, specific stem varieties shift weekly while honoring your chosen palette.
+        </p>
       </section>
 
+      <!-- OUR STORY / ATELIER BAND -->
       <section class="story-band" id="story" aria-labelledby="story-title">
-        <div class="story-image">
-          <img src="https://placehold.co/900x760/E6E4D9/1E352F?text=Flowers+from+the+Studio" alt="A quiet moment arranging fresh flowers in the studio" loading="lazy" />
-          <span class="image-note">MADE SLOWLY, WITH LOVE <span aria-hidden="true">✳</span></span>
+        <div class="story-media">
+          <div class="story-image-main">
+            <img
+              src="images/casey-scaduto-picture.jpg"
+              alt="Portrait of floral designer Casey Scaduto"
+              loading="lazy"
+            />
+          </div>
+          <div class="story-image-secondary">
+            <img
+              src="images/casey-selfie-portrait-holding-bouquets.jpg"
+              alt="Casey Scaduto holding fresh studio bouquets"
+              loading="lazy"
+            />
+          </div>
         </div>
+
         <div class="story-copy">
-          <p class="eyebrow"><span class="eyebrow-line"></span> A NOTE FROM CASEY</p>
-          <h2 id="story-title">The best things<br />grow <em>a little wild.</em></h2>
+          <p class="eyebrow"><span class="eyebrow-line"></span> THE DESIGNER</p>
+          <h2 id="story-title">Rooted in foliage,<br /><em>guided by instinct.</em></h2>
           <p>
-            I’m Casey—a flower person, color collector, and firm believer that the right bunch of blooms can change the feeling of a whole room.
+            I’m Casey Scaduto. My work is an homage to the untamed edges of Northern California—where coastal fog meets
+            deep redwood shade and wild roses climb weathered garden walls.
           </p>
           <p>
-            My little Bay Area studio is rooted in seasonal stems, thoughtful details, and arrangements that feel like they found their way to you naturally.
+            Rather than forcing stems into rigid symmetry, every arrangement is built around negative space, rich crimson-to-blush
+            tonal depth, and lush botanical greens that breathe life into a room.
           </p>
-          <a class="text-link" href="#inquire">Let’s make something lovely <span aria-hidden="true">→</span></a>
-          <div class="signature">With love, <span>Casey</span></div>
+          <a class="text-link" href="#inquire">Commission a custom piece <span aria-hidden="true">&rarr;</span></a>
+          <div class="signature">Casey Scaduto</div>
         </div>
       </section>
 
-      <section class="events section-shell" id="events" aria-labelledby="events-title">
-        <div class="events-copy">
-          <p class="eyebrow eyebrow-light"><span class="eyebrow-line"></span> FOR THE BIG DAYS &amp; THE BEAUTIFUL IN-BETWEENS</p>
-          <h2 id="events-title">A day worth<br /><em>remembering.</em></h2>
-          <p>From just-married joy to long-table dinners, we create flowers that make a gathering feel unmistakably yours.</p>
-          <a class="button button-light" href="#inquire">Tell us what you’re dreaming <span aria-hidden="true">↗</span></a>
-          <p class="event-regions">SAN FRANCISCO <span>·</span> MARIN <span>·</span> NAPA <span>·</span> EAST BAY</p>
-        </div>
-        <div class="events-image">
-          <img src="https://placehold.co/800x900/E8C5C1/1E352F?text=Gather+Beautifully" alt="A romantic floral table setting for an intimate celebration" loading="lazy" />
-          <div class="events-caption"><span>01</span> Weddings, gatherings &amp; good company</div>
+      <!-- BESPOKE WEDDINGS & EVENTS -->
+      <section class="events" id="events" aria-labelledby="events-title">
+        <div class="events-inner">
+          <div class="events-copy">
+            <p class="eyebrow eyebrow-light"><span class="eyebrow-line"></span> BESPOKE INSTALLATIONS &amp; CELEBRATIONS</p>
+            <h2 id="events-title">Atmosphere,<br /><em>sculpted in bloom.</em></h2>
+            <p>
+              From intimate candlelit dinners in wine country to architectural ceremony installations across San Francisco,
+              we design full-service floral environments tailored to the architecture of your space.
+            </p>
+            <a class="button button-crimson" href="#inquire">Request Event Proposal <span aria-hidden="true">&nearr;</span></a>
+            <p class="event-regions">SAN FRANCISCO &bull; MARIN COUNTY &bull; NAPA &amp; SONOMA &bull; EAST BAY</p>
+          </div>
+
+          <div class="events-image">
+            <img
+              src="images/purple-flowers-in-front-of-beautiful-and-verdant-leaved-plants.jpg"
+              alt="Lush dark plum and verdant botanical floral installation"
+              loading="lazy"
+            />
+            <div class="events-caption">Full-service weddings, editorial styling &amp; private dinners</div>
+          </div>
         </div>
       </section>
 
+      <!-- CUSTOM ARRANGEMENT INQUIRY FORM -->
       <section class="inquiry section-shell section-space" id="inquire" aria-labelledby="inquiry-title">
         <div class="inquiry-intro">
-          <p class="eyebrow"><span class="eyebrow-line"></span> LET’S MAKE IT PERSONAL</p>
-          <h2 id="inquiry-title">Tell me what<br />you’re <em>celebrating.</em></h2>
-          <p>A birthday, a just-because, a day you’ve been dreaming of—we’d love to hear what you have in mind.</p>
-          <div class="inquiry-aside"><span aria-hidden="true">✳</span><p>Every arrangement begins with a conversation<br /><strong>and the best blooms of the week.</strong></p></div>
+          <p class="eyebrow"><span class="eyebrow-line"></span> BESPOKE COMMISSION</p>
+          <h2 id="inquiry-title">Begin a floral<br /><em>conversation.</em></h2>
+          <p>
+            Whether sending an expressive gesture across town or planning an unforgettable gathering, share your date and
+            aesthetic direction below.
+          </p>
+          <div class="inquiry-aside">
+            <p>
+              <strong>Studio Response</strong><br />
+              We review inquiries Tuesday through Saturday and reply within 24 hours with stem availability and vessel recommendations.
+            </p>
+          </div>
         </div>
+
         <form class="inquiry-form" id="inquiry-form">
           <div class="form-row">
-            <label>Your name<input name="name" type="text" autocomplete="name" placeholder="How should we address you?" required /></label>
-            <label>Email address<input name="email" type="email" autocomplete="email" placeholder="you@example.com" required /></label>
-          </div>
-          <div class="form-row">
-            <label>What’s the occasion?
-              <select name="occasion" required>
-                <option value="" disabled selected>Choose an occasion</option>
-                <option>Just because</option><option>Birthday</option><option>Anniversary</option><option>Wedding or event</option><option>Sympathy</option><option>Something else</option>
-              </select>
+            <label>
+              Full name
+              <input name="name" type="text" autocomplete="name" placeholder="Claire Vance" required />
             </label>
-            <label>Palette mood
-              <select name="palette" required>
-                <option value="" disabled selected>Choose a palette</option>
-                <option>Soft &amp; romantic</option><option>Bright &amp; joyful</option><option>Garden &amp; green</option><option>Warm &amp; earthy</option><option>Surprise me</option>
-              </select>
+            <label>
+              Email address
+              <input name="email" type="email" autocomplete="email" placeholder="claire@domain.com" required />
             </label>
           </div>
-          <div class="form-row">
-            <label>Delivery date<input name="date" id="delivery-date" type="date" required /></label>
-            <label>Comfortable budget
-              <select name="budget" required>
-                <option value="" disabled selected>Choose a range</option>
-                <option>$75–$125</option><option>$125–$200</option><option>$200–$350</option><option>$350+</option>
-              </select>
-            </label>
-          </div>
-          <label>A little more about it <span class="optional">(optional)</span><textarea name="notes" rows="3" placeholder="Colors you love, a feeling you’re after, delivery details…"></textarea></label>
-          <button class="button form-submit" type="submit">Send your flower note <span aria-hidden="true">↗</span></button>
-          <p class="form-message" id="inquiry-message" role="status" aria-live="polite"></p>
-          <p class="form-privacy">Your note comes straight to our little studio. No spam, ever.</p>
-        </form>
-      </section>
 
-      <section class="closing-note" aria-label="A little reminder">
-        <span class="closing-flower" aria-hidden="true">✳</span>
-        <p>Good things grow when they’re shared.</p>
-        <span class="closing-flower" aria-hidden="true">✳</span>
+          <div class="form-row">
+            <label>
+              Occasion
+              <select name="occasion" required>
+                <option value="" disabled selected>Select occasion</option>
+                <option>Everyday Luxury / Just Because</option>
+                <option>Birthday or Milestone</option>
+                <option>Anniversary</option>
+                <option>Wedding or Private Event</option>
+                <option>Sympathy &amp; Remembrance</option>
+                <option>Editorial / Brand Styling</option>
+              </select>
+            </label>
+            <label>
+              Tonal Direction
+              <select name="palette" required>
+                <option value="" disabled selected>Select palette</option>
+                <option>Deep Crimson, Oxblood &amp; Rose</option>
+                <option>Verdant Forest &amp; Moody Plum</option>
+                <option>Porcelaine Ivory &amp; Soft Blush</option>
+                <option>Wild Coastal &amp; Meadow</option>
+                <option>Designer’s Market Choice</option>
+              </select>
+            </label>
+          </div>
+
+          <div class="form-row">
+            <label>
+              Preferred Date
+              <input name="date" id="delivery-date" type="date" required />
+            </label>
+            <label>
+              Investment Tier
+              <select name="budget" required>
+                <option value="" disabled selected>Select tier</option>
+                <option>$95 – $150 (Signature Arrangement)</option>
+                <option>$150 – $275 (Statement Vessel)</option>
+                <option>$275 – $500 (Grand Scale / Dinner)</option>
+                <option>$1,500+ (Intimate Event &amp; Installations)</option>
+              </select>
+            </label>
+          </div>
+
+          <label>
+            Notes, Recipient &amp; Delivery Neighborhood <span class="optional">(optional)</span>
+            <textarea
+              name="notes"
+              rows="3"
+              placeholder="Share delivery neighborhood (e.g., Pacific Heights, Mill Valley, Rockridge), card enclosure message, or favorite stems…"
+            ></textarea>
+          </label>
+
+          <button class="button form-submit" type="submit">Submit Inquiry <span aria-hidden="true">&nearr;</span></button>
+          <p class="form-message" id="inquiry-message" role="status" aria-live="polite"></p>
+        </form>
       </section>
     </main>
 
+    <!-- FOOTER -->
     <footer class="site-footer">
       <div class="footer-main">
         <div class="footer-brand">
           <a class="wordmark wordmark-footer" href="#top">
             <span class="wordmark-name">Casey Scaduto</span>
-            <span class="wordmark-subtitle">FLORAL STUDIO <span aria-hidden="true">✳</span> BAY AREA</span>
+            <span class="wordmark-subtitle">FLORAL ATELIER &mdash; SAN FRANCISCO BAY AREA</span>
           </a>
-          <p>Thoughtful flowers for the everyday and the once-in-a-lifetime.</p>
+          <p>
+            Sculptural, garden-driven floral design crafted in small batches from Northern California growers.
+          </p>
           <div class="social-links">
-            <a href="https://www.instagram.com/" target="_blank" rel="noreferrer">Instagram <span aria-hidden="true">↗</span></a><!-- TODO: REPLACE WITH REAL INFO LATER -->
-            <a href="https://www.pinterest.com/" target="_blank" rel="noreferrer">Pinterest <span aria-hidden="true">↗</span></a><!-- TODO: REPLACE WITH REAL INFO LATER -->
+            <a href="https://www.instagram.com/" target="_blank" rel="noreferrer">Instagram <span aria-hidden="true">&nearr;</span></a><!-- TODO: REPLACE WITH REAL INFO LATER -->
+            <a href="https://www.pinterest.com/" target="_blank" rel="noreferrer">Pinterest <span aria-hidden="true">&nearr;</span></a><!-- TODO: REPLACE WITH REAL INFO LATER -->
           </div>
         </div>
+
         <div class="footer-column">
-          <h2>COME SAY HELLO</h2>
-          <p>Tuesday–Saturday<br />9:00 am – 5:00 pm</p>
-          <p class="footer-detail">By appointment, always.</p>
+          <h2>ATELIER &amp; HOURS</h2>
+          <p>Tuesday – Saturday<br />9:30 am – 5:30 pm</p>
+          <p class="footer-detail">Consultations by private appointment.</p>
           <address>2148 Clement Street<br />San Francisco, CA 94121</address><!-- TODO: REPLACE WITH REAL INFO LATER -->
-          <a href="mailto:hello@caseyscadutofloral.com">hello@caseyscadutofloral.com</a><!-- TODO: REPLACE WITH REAL INFO LATER -->
+          <a href="mailto:studio@caseyscadutofloral.com">studio@caseyscadutofloral.com</a><!-- TODO: REPLACE WITH REAL INFO LATER -->
           <a href="tel:+14155550184">(415) 555-0184</a><!-- TODO: REPLACE WITH REAL INFO LATER -->
         </div>
+
         <div class="footer-column">
-          <h2>FLOWERS, NEAR YOU</h2>
-          <p>Local delivery across San Francisco, Marin, Napa, and the East Bay.</p>
-          <a class="footer-link" href="#inquire">Ask about your neighborhood <span aria-hidden="true">→</span></a>
+          <h2>BAY AREA COURIER</h2>
+          <p>White-glove hand delivery across San Francisco, Marin County, Napa Valley, and the East Bay.</p>
+          <a class="footer-link" href="#inquire">Inquire on delivery zones <span aria-hidden="true">&rarr;</span></a>
+
           <form class="newsletter-form" id="newsletter-form">
-            <label for="newsletter-email">A LITTLE FLOWER MAIL</label>
+            <label for="newsletter-email">SEASONAL DISPATCH</label>
             <div class="newsletter-field">
-              <input id="newsletter-email" name="newsletter-email" type="email" placeholder="Your email address" autocomplete="email" required />
-              <button type="submit" aria-label="Sign up for flower mail">→</button>
+              <input id="newsletter-email" name="newsletter-email" type="email" placeholder="Email address" autocomplete="email" required />
+              <button type="submit" aria-label="Subscribe to seasonal dispatch">&rarr;</button>
             </div>
             <p class="newsletter-message" id="newsletter-message" role="status" aria-live="polite"></p>
           </form>
         </div>
       </div>
+
       <div class="footer-bottom">
-        <span>© <span id="current-year"></span> CASEY SCADUTO FLORAL</span>
-        <span>MADE WITH CARE IN THE BAY AREA <span aria-hidden="true">✳</span></span>
-        <a href="#top">BACK TO TOP ↑</a>
+        <span>&copy; <span id="current-year"></span> CASEY SCADUTO FLORAL</span>
+        <span>SAN FRANCISCO &bull; MARIN &bull; NAPA &bull; EAST BAY</span>
+        <a href="#top">RETURN TO TOP &uarr;</a>
       </div>
     </footer>
 
+    <!-- QUICK VIEW / CUSTOMIZE MODAL -->
     <dialog class="product-dialog" id="product-dialog" aria-labelledby="dialog-title">
-      <button class="dialog-close" type="button" aria-label="Close quick view">×</button>
-      <div class="dialog-image"><img id="dialog-image" src="" alt="" /></div>
+      <button class="dialog-close" type="button" aria-label="Close quick view">&times;</button>
+      <div class="dialog-image">
+        <img id="dialog-image" src="" alt="" />
+      </div>
       <div class="dialog-content">
-        <p class="eyebrow"><span class="eyebrow-line"></span> HAND-ARRANGED, JUST FOR YOU</p>
+        <p class="eyebrow"><span class="eyebrow-line"></span> BESPOKE VESSEL EDITION</p>
         <h2 id="dialog-title"></h2>
         <p class="dialog-description" id="dialog-description"></p>
         <p class="dialog-stems" id="dialog-stems"></p>
-        <label for="bouquet-size">Choose your size</label>
+
+        <label for="bouquet-size">Select Scale</label>
         <select id="bouquet-size">
-          <option value="0">Petite — +$0</option>
-          <option value="45">Abundant — +$45</option>
-          <option value="90">Celebration — +$90</option>
+          <option value="0">Petite Studio Vessel &mdash; Included</option>
+          <option value="55">Abundant Statement &mdash; +$55</option>
+          <option value="120">Grand Dinner / Gala Scale &mdash; +$120</option>
         </select>
-        <div class="dialog-total"><span>Arrangement total</span><strong id="dialog-price"></strong></div>
-        <a class="button dialog-cta" id="dialog-cta" href="#inquire">Make it yours <span aria-hidden="true">↗</span></a>
-        <p class="dialog-footnote">Seasonal flowers may vary; the feeling stays the same.</p>
+
+        <div class="dialog-total">
+          <span>Estimated Total</span>
+          <strong id="dialog-price"></strong>
+        </div>
+
+        <a class="button dialog-cta" id="dialog-cta" href="#inquire">Reserve This Edition <span aria-hidden="true">&nearr;</span></a>
+        <p class="dialog-footnote">Includes hand-blown or ceramic studio vessel and handwritten linen card.</p>
       </div>
     </dialog>
-    <div class="dialog-backdrop" hidden></div>
   </body>
 </html>
