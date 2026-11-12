@@ -5,7 +5,7 @@ const products = {
       "A moody, architectural composition saturated in oxblood, deep carmine, and velvety crimson tones—designed to anchor a room.",
     stems: "Heirloom blood-red garden roses, burgundy ranunculus, chocolate cosmos & dark copper foliage.",
     price: 135,
-    image: "images/dark-redpink-flowers.jpg",
+    image: "images/dark-redpink-flowers.jpeg",
   },
   morning: {
     name: "The Morning Sunlit Peony",
@@ -13,7 +13,7 @@ const products = {
       "A layered gradient from saturated magenta-pink to soft petal blush, capturing early light across an open table.",
     stems: "Coral-crimson peonies, blush spray roses, sweet peas & trailing jasmine vine.",
     price: 120,
-    image: "images/darkpink-lightpink-and-white-flowers.jpg",
+    image: "images/darkpink-lightpink-and-white-flowers.jpeg",
   },
   verdant: {
     name: "Verdant Botanical & Plum",
@@ -21,7 +21,7 @@ const products = {
       "Lush forest greens paired with deep violet and plum blossoms for an organic, woodland-gathered silhouette.",
     stems: "Deep plum scabiosa, purple sweet peas, hellebores & wild Marin fern fronds.",
     price: 140,
-    image: "images/purple-flowers-in-front-of-beautiful-and-verdant-leaved-plants.jpg",
+    image: "images/purple-flowers-in-front-of-beautiful-and-verdant-leaved-plants.jpeg",
   },
   porcelaine: {
     name: "The Porcelaine & Blush Edit",
@@ -29,7 +29,7 @@ const products = {
       "Refined, luminous ivory petals punctuated by quiet rose undertones and silvery-green Mediterranean branches.",
     stems: "Alabaster lisianthus, heirloom blush garden roses, white ranunculus & olive foliage.",
     price: 110,
-    image: "images/white-and-lightpink-flowers.jpg",
+    image: "images/white-and-lightpink-flowers.jpeg",
   },
   coastal: {
     name: "Coastal Wildflower Study",
@@ -37,7 +37,7 @@ const products = {
       "An unhurried, airy gathering of Northern California meadow blooms and wild grasses with effortless movement.",
     stems: "Marin meadow cosmos, wild delphinium, lavender-plum accents & coastal grasses.",
     price: 95,
-    image: "images/purple-flowers-on-kitchen-table-plus-rustic-wood-theme-in-bg.jpg",
+    image: "images/purple-flowers-on-kitchen-table-plus-rustic-wood-theme-in-bg.jpeg",
   },
   compote: {
     name: "Atelier Table Compote",
@@ -45,7 +45,7 @@ const products = {
       "Designed low and lush for intimate dinner conversation, arranged in a footed matte ceramic studio vessel.",
     stems: "Seasonal market focal blooms, trailing greenery & sculptural textural branches.",
     price: 165,
-    image: "images/candid-arrangement-photo-in-room-natural.jpg",
+    image: "images/candid-arrangement-photo-in-room-natural.jpeg",
   },
 };
 
