@@ -1,135 +1,308 @@
-const products = {
-  morning: {
-    name: "The Morning Sunlit Peony",
-    description: "A loose, light-catching mix made for slow mornings, open windows, and someone you love.",
-    stems: "Peonies, garden roses, seasonal filler & airy greens.",
-    price: 95,
-    image: "https://placehold.co/700x900/E8C5C1/1E352F?text=Morning+Sunlit+Peony",
-  },
-  gardenia: {
-    name: "Botanical Gardenia Luxe",
-    description: "A lush, sculptural garden arrangement with creamy blooms and beautiful movement.",
-    stems: "Gardenias, lisianthus, textural foliage & seasonal accents.",
-    price: 125,
-    image: "https://placehold.co/700x900/E6E4D9/1E352F?text=Botanical+Gardenia+Luxe",
-  },
-  velvet: {
-    name: "Velvet Rose & Ranunculus",
-    description: "A romantic, petal-soft arrangement with plenty of personality and a hint of nostalgia.",
-    stems: "Velvety roses, ranunculus, sweet peas & soft greenery.",
-    price: 110,
-    image: "https://placehold.co/700x900/DCC6C0/1E352F?text=Velvet+Rose+%26+Ranunculus",
-  },
-  coastal: {
-    name: "Coastal Wildflower Study",
-    description: "A meadow-inspired gathering of delicate blooms, relaxed lines, and coastal color.",
-    stems: "Seasonal meadow blooms, cosmos, grasses & gathered greenery.",
-    price: 85,
-    image: "https://placehold.co/700x900/D9E0D9/1E352F?text=Coastal+Wildflower+Study",
-  },
-};
+/* ==========================================================================
+   CASEY SCADUTO FLORAL ATELIER - APPLICATION CONTROLLER
+   ========================================================================== */
 
-const dialog = document.querySelector("#product-dialog");
-const dialogImage = document.querySelector("#dialog-image");
-const dialogTitle = document.querySelector("#dialog-title");
-const dialogDescription = document.querySelector("#dialog-description");
-const dialogStems = document.querySelector("#dialog-stems");
-const dialogPrice = document.querySelector("#dialog-price");
-const bouquetSize = document.querySelector("#bouquet-size");
-let selectedProduct;
+const signatureEditions = [
+    {
+        id: 1,
+        title: "The Crimson Nocturne Study",
+        category: "crimson",
+        price: 265,
+        image: "images/dark-redpink-flowers.jpeg",
+        description: "Deep burgundy garden roses, oxblood ranunculus, and trailing dark foliage arranged in an artisanal ceramic vessel.",
+        notes: "Moody, theatrical, and exceptionally rich in tone."
+    },
+    {
+        id: 2,
+        title: "The Morning Peony Compote",
+        category: "blush",
+        price: 295,
+        image: "images/darkpink-lightpink-and-white-flowers.jpeg",
+        description: "Luminous dark pink, light pink, and ivory statement peonies paired with delicate seasonal filler foliage.",
+        notes: "Soft romance with an unmistakable sculptural presence."
+    },
+    {
+        id: 3,
+        title: "Verdant Conservatory & Orchid Triptych",
+        category: "verdant",
+        price: 380,
+        image: "images/3vases-1purplebluepeachgreenonionflowers-2and3-greenpeachpinkgreenleavesandgreenonionflowers.jpeg",
+        description: "A breathtaking three-vases compilation featuring purple-blue accents, peach tones, green onion flowers, and trailing leaves.",
+        notes: "Our flagship multi-vessel architectural statement."
+    },
+    {
+        id: 4,
+        title: "Coastal Wildflower & Berry Study",
+        category: "verdant",
+        price: 220,
+        image: "images/purple-flowers-on-kitchen-table-plus-rustic-wood-theme-in-bg.jpeg",
+        description: "Wild purple blossoms styled against rustic wood aesthetics, capturing the raw coastline of Northern California.",
+        notes: "Organic, unscripted, and effortlessly grounded."
+    },
+    {
+        id: 5,
+        title: "Porcelain & Blush Elegance",
+        category: "blush",
+        price: 245,
+        image: "images/white-and-lightpink-flowers.jpeg",
+        description: "Subtle white and light pink garden blooms in a whitewashed ceramic vessel, designed for quiet luxury.",
+        notes: "Refined elegance for intimate dining rooms."
+    },
+    {
+        id: 6,
+        title: "Emerald Botanical Sanctuary",
+        category: "verdant",
+        price: 310,
+        image: "images/purple-flowers-in-front-of-beautiful-and-verdant-leaved-plants.jpeg",
+        description: "Rich purple florals showcased directly in front of lush, verdant potted botanicals and deep green foliage.",
+        notes: "A living study in botanical saturation."
+    },
+    {
+        id: 7,
+        title: "Quad-Vase Wood Table Symphony",
+        category: "verdant",
+        price: 450,
+        image: "images/four-vases-on-wood-table-1whitepinkyellowpeach-2lightpinkgreen-3orangegreen-4peachgreenyellowlightblue.jpeg",
+        description: "Four distinct artisanal vases featuring white, pink, yellow, peach, orange, and light blue botanical harmonies.",
+        notes: "The ultimate centerpiece collection for long dining tables."
+    },
+    {
+        id: 8,
+        title: "Goldenrod & Peach Ranunculus",
+        category: "crimson",
+        price: 235,
+        image: "images/goldenrod-peachranunculus-yellowcallalily-smalllightblueflowers-all-in-one-vase-on-wood-table.jpeg",
+        description: "Goldenrod, peach ranunculus, yellow calla lilies, and delicate light blue blossoms united in a rustic wooden setting.",
+        notes: "Warm sunlight translated into floral form."
+    },
+    {
+        id: 9,
+        title: "Chrysanthemum & Sea Holly Glass",
+        category: "blush",
+        price: 215,
+        image: "images/lightpink-chrysantheum,-daisies,-long-green-leaves,-and-greyblue-seahollies-all-in-a-glass-vase.jpeg",
+        description: "Light pink chrysanthemums, delicate daisies, elongated green leaves, and cool grey-blue sea hollies in clear glass.",
+        notes: "Textural contrast with a crisp coastal breeze feel."
+    },
+    {
+        id: 10,
+        title: "Dahlia, Orchid & Onion Flower Suite",
+        category: "crimson",
+        price: 280,
+        image: "images/lightpinkdahlia-whiteorchids-mutedgreenleafstems-greenonionflower-.jpeg",
+        description: "Light pink dahlias paired with pristine white orchids, muted green leaf stems, and architectural green onion flowers.",
+        notes: "Exotic, architectural, and highly sophisticated."
+    },
+    {
+        id: 11,
+        title: "Triptych: White Orchid & Ball Dahlia",
+        category: "blush",
+        price: 340,
+        image: "images/three-vases-on-wood-table-each-has-white-orchid-lightpink-ball-dahlia-white-baneberry-.jpeg",
+        description: "Three wooden-table vessels, each featuring white orchids, light pink ball dahlias, and white baneberry branches.",
+        notes: "Balanced symmetry across a triple-vessel display."
+    },
+    {
+        id: 12,
+        title: "Dual Amber & Orange Harvest",
+        category: "crimson",
+        price: 275,
+        image: "images/two-vases-of-orangeflowers-pinkchrysantheums-tightlypackedgreenbunches-greenonionflower.jpeg",
+        description: "Two companion vases of vibrant orange blossoms, pink chrysanthemums, tightly packed green bunches, and onion flowers.",
+        notes: "Bold, saturated, and warm."
+    },
+    {
+        id: 13,
+        title: "The Napa Valley Estate Compote",
+        category: "verdant",
+        price: 325,
+        image: "images/vase-in-candid-environment-with-orangeflowers-whiteorchids-yellowcallalily-greenleafstem-onionflower.jpeg",
+        description: "Orange flowers, white orchids, yellow calla lilies, and structural onion stems photographed in a candid estate light.",
+        notes: "Designed for wine country tables and grand foyers."
+    }
+];
 
-function updateDialogPrice() {
-  if (!selectedProduct) return;
-  const total = selectedProduct.price + Number(bouquetSize.value);
-  dialogPrice.textContent = `$${total}`;
-  document.querySelector("#dialog-cta").href = "#inquire";
+document.addEventListener("DOMContentLoaded", () => {
+    renderProducts(signatureEditions);
+    initFilters();
+    initModal();
+    initZipChecker();
+});
+
+/* Render Products */
+function renderProducts(products) {
+    const grid = document.getElementById("productGrid");
+    if (!grid) return;
+
+    grid.innerHTML = products.map(p => `
+        <div class="product-card" data-category="${p.category}" onclick="openProductModal(${p.id})">
+            <div class="product-image-wrap">
+                <span class="product-badge">${p.category.toUpperCase()}</span>
+                <img src="${p.image}" alt="${p.title}" loading="lazy">
+            </div>
+            <div class="product-info">
+                <h3 class="product-title">${p.title}</h3>
+                <p class="product-desc">${p.description}</p>
+                <div class="product-footer">
+                    <span class="product-price">$${p.price}</span>
+                    <button class="card-action-btn">Commission &rarr;</button>
+                </div>
+            </div>
+        </div>
+    `).join("");
 }
 
-function openProduct(productKey) {
-  const product = products[productKey];
-  if (!product) return;
-  selectedProduct = product;
-  dialogTitle.textContent = product.name;
-  dialogDescription.textContent = product.description;
-  dialogStems.textContent = product.stems;
-  dialogImage.src = product.image;
-  dialogImage.alt = product.name;
-  bouquetSize.value = "0";
-  updateDialogPrice();
-  dialog.showModal();
-  document.body.classList.add("dialog-open");
+/* Filter Functionality */
+function initFilters() {
+    const tabs = document.querySelectorAll(".filter-tab");
+    tabs.forEach(tab => {
+        tab.addEventListener("click", () => {
+            tabs.forEach(t => t.classList.remove("active"));
+            tab.classList.add("active");
+
+            const filter = tab.getAttribute("data-filter");
+            if (filter === "all") {
+                renderProducts(signatureEditions);
+            } else {
+                const filtered = signatureEditions.filter(p => p.category === filter);
+                renderProducts(filtered);
+            }
+        });
+    });
 }
 
-document.querySelectorAll(".quick-view").forEach((button) => {
-  button.addEventListener("click", () => openProduct(button.dataset.product));
-});
+/* Modal Controller */
+const modalBackdrop = document.getElementById("productModal");
+const closeModalBtn = document.getElementById("closeModal");
+const openInquiryBtn = document.getElementById("openInquiryModal");
 
-document.querySelector(".dialog-close").addEventListener("click", () => dialog.close());
-dialog.addEventListener("close", () => document.body.classList.remove("dialog-open"));
-dialog.addEventListener("click", (event) => {
-  if (event.target === dialog) dialog.close();
-});
-bouquetSize.addEventListener("change", updateDialogPrice);
-document.querySelector("#dialog-cta").addEventListener("click", () => {
-  const size = bouquetSize.selectedOptions[0].textContent.split(" — ")[0];
-  const notes = document.querySelector("#inquiry-form [name='notes']");
-  notes.value = `I'm interested in ${selectedProduct.name} in the ${size} size ($${dialogPrice.textContent.slice(1)}).`;
-  dialog.close();
-});
+function initModal() {
+    if (closeModalBtn) {
+        closeModalBtn.addEventListener("click", closeModal);
+    }
+    if (modalBackdrop) {
+        modalBackdrop.addEventListener("click", (e) => {
+            if (e.target === modalBackdrop) closeModal();
+        });
+    }
+    if (openInquiryBtn) {
+        openInquiryBtn.addEventListener("click", () => {
+            openGeneralInquiryModal();
+        });
+    }
+}
 
-document.querySelectorAll(".filter-button").forEach((button) => {
-  button.addEventListener("click", () => {
-    const filter = button.dataset.filter;
-    document.querySelectorAll(".filter-button").forEach((filterButton) => {
-      const active = filterButton === button;
-      filterButton.classList.toggle("is-active", active);
-      filterButton.setAttribute("aria-pressed", String(active));
+function openProductModal(id) {
+    const product = signatureEditions.find(p => p.id === id);
+    if (!product) return;
+
+    const modalContent = document.getElementById("modalContent");
+    modalContent.innerHTML = `
+        <div class="modal-layout">
+            <div class="modal-img-wrap">
+                <img src="${product.image}" alt="${product.title}">
+            </div>
+            <div class="modal-details">
+                <span class="eyebrow">Signature Edition</span>
+                <h3>${product.title}</h3>
+                <span class="modal-price" id="modalPrice">$${product.price}</span>
+                <p class="modal-desc">${product.description}</p>
+                <p style="font-size:0.85rem; color:#13291E; font-weight:600; margin-bottom:1.5rem;">Curation Note: ${product.notes}</p>
+                
+                <div class="size-options">
+                    <label>Select Scale / Vessel Tier</label>
+                    <div class="size-buttons">
+                        <div class="size-btn active" onclick="updatePrice(${product.price}, this)">Atelier Standard ($${product.price})</div>
+                        <div class="size-btn" onclick="updatePrice(${product.price + 90}, this)">Grand Estate ($${product.price + 90})</div>
+                    </div>
+                </div>
+
+                <form class="modal-inquiry-form" onsubmit="handleInquirySubmit(event, '${product.title}')">
+                    <input type="text" placeholder="Your Full Name" required>
+                    <input type="email" placeholder="Email Address" required>
+                    <input type="text" placeholder="Preferred Delivery Date (MM/DD/YYYY)" required>
+                    <textarea placeholder="Custom color requests or delivery notes (optional)"></textarea>
+                    <button type="submit" class="btn btn-primary" style="width:100%;">Submit Commission Request</button>
+                </form>
+            </div>
+        </div>
+    `;
+
+    modalBackdrop.classList.add("active");
+    document.body.style.overflow = "hidden";
+}
+
+function openGeneralInquiryModal() {
+    const modalContent = document.getElementById("modalContent");
+    modalContent.innerHTML = `
+        <div style="padding: 1rem;">
+            <span class="eyebrow">Bespoke Commission</span>
+            <h3 style="font-size: 2rem; color: #13291E; margin-bottom: 0.5rem;">Custom Floral Consultation</h3>
+            <p style="color: #7A7067; margin-bottom: 1.5rem; font-size: 0.95rem;">Tell us about your upcoming event, wedding, or private residence installation across the San Francisco Bay Area.</p>
+            
+            <form class="modal-inquiry-form" onsubmit="handleInquirySubmit(event, 'Custom Bespoke Consultation')">
+                <input type="text" placeholder="Your Full Name" required>
+                <input type="email" placeholder="Email Address" required>
+                <input type="text" placeholder="Phone Number" required>
+                <input type="text" placeholder="Event Date or Installation Timeline" required>
+                <textarea placeholder="Share your vision, floral palette preferences, and venue location..."></textarea>
+                <button type="submit" class="btn btn-primary" style="width:100%;">Request Private Consultation</button>
+            </form>
+        </div>
+    `;
+
+    modalBackdrop.classList.add("active");
+    document.body.style.overflow = "hidden";
+}
+
+function closeModal() {
+    if (modalBackdrop) {
+        modalBackdrop.classList.remove("active");
+        document.body.style.overflow = "auto";
+    }
+}
+
+function updatePrice(basePrice, el) {
+    document.querySelectorAll(".size-btn").forEach(btn => btn.classList.remove("active"));
+    el.classList.add("active");
+    document.getElementById("modalPrice").textContent = `$${basePrice}`;
+}
+
+function handleInquirySubmit(e, itemTitle) {
+    e.preventDefault();
+    alert(`Thank you! Your commission request for "${itemTitle}" has been received by Casey Scaduto Floral. Our studio manager will reach out within 4 business hours to confirm delivery details.`);
+    closeModal();
+}
+
+/* Zip Code Delivery Validator */
+function initZipChecker() {
+    const btn = document.getElementById("checkZipBtn");
+    const input = document.getElementById("zipInput");
+    const result = document.getElementById("zipResult");
+
+    if (!btn) return;
+
+    const validZones = [
+        "94102", "94103", "94104", "94105", "94107", "94108", "94109", "94111", "94114", "94115", "94117", "94118", "94121", "94122", "94123", "94124", "94127", "94129", "94131", "94133", "94158",
+        "94901", "94903", "94904", "94920", "94925", "94941", "94960", "94965",
+        "94501", "94601", "94602", "94609", "94611", "94612", "94702", "94703", "94704", "94705", "94708",
+        "94558", "94559"
+    ];
+
+    btn.addEventListener("click", () => {
+        const zip = input.value.trim();
+        if (zip.length !== 5) {
+            result.style.color = "#E58E73";
+            result.textContent = "Please enter a valid 5-digit Bay Area postal code.";
+            return;
+        }
+
+        if (validZones.includes(zip) || zip.startsWith("94")) {
+            result.style.color = "#E8C88B";
+            result.textContent = "✓ In-Zone: Eligible for white-glove hand delivery & temperature-controlled transit.";
+        } else {
+            result.style.color = "#E58E73";
+            result.textContent = "• Extended Zone: Please contact the studio directly for bespoke courier dispatch quotes.";
+        }
     });
-    let visibleCount = 0;
-    document.querySelectorAll(".product-card").forEach((card) => {
-      const visible = filter === "all" || card.dataset.category.split(" ").includes(filter);
-      card.hidden = !visible;
-      if (visible) visibleCount += 1;
-    });
-    document.querySelector("#design-count").textContent = `${String(visibleCount).padStart(2, "0")} ${visibleCount === 1 ? "DESIGN" : "DESIGNS"}`;
-  });
-});
-
-const menuToggle = document.querySelector(".menu-toggle");
-const navigation = document.querySelector("#primary-navigation");
-menuToggle.addEventListener("click", () => {
-  const expanded = menuToggle.getAttribute("aria-expanded") === "true";
-  menuToggle.setAttribute("aria-expanded", String(!expanded));
-  menuToggle.querySelector(".sr-only").textContent = expanded ? "Open navigation menu" : "Close navigation menu";
-  navigation.classList.toggle("is-open", !expanded);
-});
-navigation.querySelectorAll("a").forEach((link) => {
-  link.addEventListener("click", () => {
-    menuToggle.setAttribute("aria-expanded", "false");
-    menuToggle.querySelector(".sr-only").textContent = "Open navigation menu";
-    navigation.classList.remove("is-open");
-  });
-});
-
-const deliveryDate = document.querySelector("#delivery-date");
-const localToday = new Date();
-localToday.setMinutes(localToday.getMinutes() - localToday.getTimezoneOffset());
-deliveryDate.min = localToday.toISOString().slice(0, 10);
-
-document.querySelector("#inquiry-form").addEventListener("submit", (event) => {
-  event.preventDefault();
-  if (!event.currentTarget.reportValidity()) return;
-  const name = new FormData(event.currentTarget).get("name").toString().trim();
-  document.querySelector("#inquiry-message").textContent = `Thank you, ${name}! Your flower note is ready for our studio. We’ll be in touch soon.`;
-  event.currentTarget.reset();
-  deliveryDate.min = localToday.toISOString().slice(0, 10);
-});
-
-document.querySelector("#newsletter-form").addEventListener("submit", (event) => {
-  event.preventDefault();
-  if (!event.currentTarget.reportValidity()) return;
-  document.querySelector("#newsletter-message").textContent = "You’re on the list—watch your inbox for a little flower mail.";
-  event.currentTarget.reset();
-});
-
-document.querySelector("#current-year").textContent = String(new Date().getFullYear());
+}
